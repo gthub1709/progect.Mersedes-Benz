@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mercedes vs BMW</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+    }
+    .slide img {
+      max-width: 300px;
+      margin: 20px 0;
+    }
+    .active {
+      opacity: 1;
+      z-index: 1;
+    }
+    h1, h2, p {
+      margin: 10px 0;
+    }
+    .hala {
+      font-size: 2.5rem;
+      color: #00ffcc;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Слайды -->
+
+  <div class="slide active">
+    <h1>Mercedes-Benz</h1>
+    <p>Качество. Статус. Настоящий король дорог.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" alt="Логотип Mercedes" />
+  </div>
+
+  <div class="slide">
+    <h2>BMW?</h2>
+    <p>Машина для подростков с TikTok</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="Логотип BMW" />
+    <img src="https://media.giphy.com/media/7lWkA1XJNG2H2/giphy.gif" alt="BMW ломается" />
+  </div>
+
+  <div class="slide">
+    <h2>Mercedes vs BMW</h2>
+    <p>Mercedes — машина настоящих людей.</p>
+    <p>BMW — это всё понты и ломки!</p>
+  </div>
+
+  <div class="slide">
+    <h2>Ремонт BMW</h2>
+    <p>Каждые 2 недели — что-то ломается.</p>
+    <p>Mercedes? О, да, мы вам об этом даже не скажем.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Выбор за тобой</h2>
+    <p>👑 Mercedes — король дорог!</p>
+    <p>😂 BMW — машина для школьников.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/3163/3163270.png" alt="Типы водителей" />
+  </div>
+
+  <!-- Новый финальный слайд с жёстким троллингом -->
+  <div class="slide">
+    <h2>BMW — Нужна ли она вообще?</h2>
+    <p>🏆 Mercedes: комфорт, мощь, стиль.</p>
+    <p>🚧 BMW: просто коробка с колесами и куча проблем!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" alt="Логотип Mercedes" />
+    <div class="hala">Mercedes навсегда!</div>
+  </div>
+
+  <!-- JS для автослайдов -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000); // каждые 5 секунд
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
